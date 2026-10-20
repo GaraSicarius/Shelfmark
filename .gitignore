@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.21st/
+.impeccable/review/
+*.log
+.omx/
+.next/
+.data/
+.env*.local
+.env
+next-env.d.ts
+*.tsbuildinfo
