@@ -1,26 +1,40 @@
 {
-  "name": "hackathon-starter",
+  "name": "shelfmark",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1",
-    "test": "node --test src/navigation.test.ts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:migrate": "node --env-file-if-exists=.env.local scripts/migrate.ts"
   },
   "dependencies": {
-    "@fontsource-variable/manrope": "^5.3.0",
-    "lucide-react": "^1.49.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "@ai-sdk/google": "^4.0.95",
+    "@electric-sql/pglite": "0.5.9",
+    "@electric-sql/pglite-pgvector": "^0.0.10",
+    "@mozilla/readability": "0.6.0",
+    "ai": "7.0.138",
+    "linkedom": "0.18.13",
+    "lucide-react": "1.55.0",
+    "next": "^16.4.3",
+    "pg": "8.23.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.7"
   },
   "devDependencies": {
-    "@types/node": "^26.6.4",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "@vitejs/plugin-react": "^6.1.1",
-    "typescript": "^7.0.2",
-    "vite": "^8.3.2"
+    "@types/node": "26.6.5",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "^16.4.3",
+    "playwright": "^1.64.0",
+    "typescript": "6.0.3",
+    "vitest": "5.0.4"
   }
 }
